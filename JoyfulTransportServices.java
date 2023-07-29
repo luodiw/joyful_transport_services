@@ -302,7 +302,7 @@ class maintenanceStaff implements employees {
 		returnVehicleForService(vehicle_number);
 	}
 
-	Integer maintainance_Threshold = 10;
+	Integer  = 10;
 }
 
 class drivers implements employees {
