@@ -1,7 +1,4 @@
 package com.joyful_transport.defs;
-
-
-
 // needs to import central control system
 
 class Driver {
