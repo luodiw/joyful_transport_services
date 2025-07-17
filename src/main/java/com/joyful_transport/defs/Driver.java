@@ -1,14 +1,14 @@
 package com.joyful_transport.defs;
 
-// needs to import central control system
+import com.joyful_transport.controls.CentralControlSystem;
 
-class Driver {
+public class Driver {
 	public Driver(String name) {
 		this.drivername = name;
 	}
-	String drivername;
+	public String drivername;
 	public static void PlyadditionalBus(Route request, double time)
 	{
-		centralControlSystem.AddScheduleForOverCrowdRequest(request,time);
+		CentralControlSystem.AddScheduleForOverCrowdRequest(request,time);
 	}
 }

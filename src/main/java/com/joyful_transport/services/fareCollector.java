@@ -1,10 +1,9 @@
 package com.joyful_transport.services;
 
 import com.joyful_transport.defs.commuters;
-// import bus
 import com.joyful_transport.vehicles.bus;
 
-class fareCollector {
+public class fareCollector {
 	commuters c;
 	int tripFare;
 
@@ -12,11 +11,9 @@ class fareCollector {
 		c = commuters;
 		c.boardedAt = b.currentLocation;
 	}
-	
 
 	public void requestToDepartVehicle(commuters commuters, bus b) {
 		c.departedAt = b.currentLocation;
 		tripFare += (b.route.routes.indexOf(c.departedAt) - b.route.routes.indexOf(c.boardedAt)) * 2;
 	}
-
 }

@@ -2,15 +2,16 @@ package com.joyful_transport.defs;
 
 import java.util.*;
 
-import src.main.java.com.joyful_transport.controls.centralControlSystem;
+import com.joyful_transport.controls.CentralControlSystem;
+import com.joyful_transport.vehicles.bus;
 
-class scheduleManager implements Runnable {
+public class ScheduleManager implements Runnable {
 	Time time;
 	static Schedule[] schedule;
-	centralControlSystem ccs;
+	CentralControlSystem ccs;
 
 	//@Requires({"time>=0", "time<=120", "s.length>=0"})
-	public scheduleManager(Schedule[] s, Time t) {
+	public ScheduleManager(Schedule[] s, Time t) {
 		schedule = s;
 		time = t;
 	}
@@ -29,12 +30,12 @@ class scheduleManager implements Runnable {
 			for (int i = 0; i < schedule.length; i++) {
 				if (schedule[i].starttime == time.getHour()) {
 					System.out.println("Scheduled Trip For Bus :" + (i+1));
-					b = centralControlSystem.getBus();
+					b = CentralControlSystem.getBus();
 					if (b == null) {
 						System.out.println("No buses available!");
 						continue;
 					}
-					d = centralControlSystem.getDriver();
+					d = CentralControlSystem.getDriver();
 					if (d == null) {
 						System.out.println("No drivers available!");
 						continue;

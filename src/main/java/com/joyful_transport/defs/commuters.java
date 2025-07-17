@@ -1,6 +1,9 @@
 package com.joyful_transport.defs;
 
-class commuters {
+import com.joyful_transport.controls.CentralControlSystem;
+import com.joyful_transport.vehicles.bus;
+
+public class commuters {
 	int id;
 	public Stops boardedAt = null;
 	public Stops departedAt = null;
@@ -11,26 +14,26 @@ class commuters {
 	}
 
 	public void registerCommuter() {
-		centralControlSystem.registerCommuter(this);
+		CentralControlSystem.registerCommuter(this);
 	}
 
 	public void retrieveRouteMap(String sourceStop, String destStop) {
-		commuterDisplay = centralControlSystem.retrieveRouteMap(sourceStop, destStop);
+		commuterDisplay = CentralControlSystem.retrieveRouteMap(sourceStop, destStop);
 		this.displayNotifications(commuterDisplay);
 	}
 
 	public void retrieveFare(String sourceStop, String destStop) {
-		commuterDisplay = centralControlSystem.retrieveFare(sourceStop, destStop);
+		commuterDisplay = CentralControlSystem.retrieveFare(sourceStop, destStop);
 		this.displayNotifications(commuterDisplay);
 	}
 
 	public void retrieveSchedule(String sourceStop) {
-		commuterDisplay = centralControlSystem.retrieveSchedule(sourceStop);
+		commuterDisplay = CentralControlSystem.retrieveSchedule(sourceStop);
 		this.displayNotifications(commuterDisplay);
 	}
 
 	public void retrieveRealTimeLocation() {
-		commuterDisplay = centralControlSystem.retrieveRealTimeLocations();
+		commuterDisplay = CentralControlSystem.retrieveRealTimeLocations();
 		this.displayNotifications(commuterDisplay);
 	}
 
@@ -47,7 +50,7 @@ class commuters {
 	}
 	
 	public void requestVan(String s) {
-	centralControlSystem.requestVan(this, s);
+	CentralControlSystem.requestVan(this, s);
 	
 	}
 }
