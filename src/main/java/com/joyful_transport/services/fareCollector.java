@@ -1,5 +1,7 @@
 package com.joyful_transport.services;
 
+import com.joyful_transport.defs.commuters;
+
 class fareCollector {
 	commuters c;
 	int tripFare;
