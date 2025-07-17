@@ -1,6 +1,8 @@
 package com.joyful_transport.services;
 
 import com.joyful_transport.defs.commuters;
+// import bus
+import com.joyful_transport.vehicles.bus;
 
 class fareCollector {
 	commuters c;
