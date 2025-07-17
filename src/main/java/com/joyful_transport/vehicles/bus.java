@@ -3,6 +3,7 @@ package com.joyful_transport.vehicles;
 import com.joyful_transport.defs.Route;
 import com.joyful_transport.defs.Stops;
 import com.joyful_transport.vehicles.vehicles;
+import com.joyful_transport.services.fareCollector;
 import com.joyful_transport.controls.centralControlSystem;
 
 public class bus implements vehicles {
