@@ -5,7 +5,7 @@ import com.joyful_transport.vehicles.bus;
 
 public class fareCollector {
 	commuters c;
-	int tripFare;
+	public int tripFare;
 
 	public void requestToBoardVehicle(commuters commuters, bus b) {
 		c = commuters;
