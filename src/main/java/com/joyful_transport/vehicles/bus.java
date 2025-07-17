@@ -5,7 +5,7 @@ import com.joyful_transport.defs.Stops;
 import com.joyful_transport.vehicles.vehicles;
 import com.joyful_transport.controls.centralControlSystem;
 
-public class bus {
+public class bus implements vehicles {
     public Route route = null;
 	int busTime = 0;
 	Stops currentLocation = centralControlSystem.stops[8];
