@@ -1,6 +1,8 @@
-package src.main.java.com.joyful_transport.defs;
+package com.joyful_transport.defs;
 
 import java.util.*;
+
+import src.main.java.com.joyful_transport.controls.centralControlSystem;
 
 class scheduleManager implements Runnable {
 	Time time;
